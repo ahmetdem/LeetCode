@@ -17,7 +17,6 @@ class Solution(object):
             return diglist
 
 
-    digitlist = getDig(num)
         def isSelf(num):
             digitlist = getDig(num)
             if 0 in digitlist:
