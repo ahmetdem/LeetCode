@@ -1,21 +1,24 @@
-sentence = "i love eating burger"
-searchWord = "burg"
+class Solution(object):
+    def isPrefixOfWord(self, sentence, searchWord):
+        """
+        :type sentence: str
+        :type searchWord: str
+        :rtype: int
+        """
 
-def isPrefixOfWord(sentence, searchWord):
-    value = 0
-    for word in sentence.split():
-        print(word)
-        value += 1
-        if searchWord in word:
-            if atStart(word, searchWord):
-                return value
+        def isTrue(sentence, searchWord):
+            value = 0
+            for word in sentence.split():
+                value += 1
+                if searchWord in word:
+                    if atStart(word, searchWord):
+                        return value
+            else: return -1
+
+        def atStart(word, searchWord):
+            word = word[:len(searchWord)]
+            if word == searchWord:
+                return True
+            else: return False
         
-def atStart(word, searchWord):
-    word = word[:len(searchWord)]
-    if word == searchWord:
-        print(True)
-        return True
-    else: 
-        print(False)
-        return False
-        
+        return isTrue(sentence, searchWord)
