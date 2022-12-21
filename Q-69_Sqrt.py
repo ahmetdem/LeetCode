@@ -1,5 +1,5 @@
+import math 
 class Solution(object):
-    import math 
     def mySqrt(self, x):
         """
         :type x: int
