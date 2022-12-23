@@ -1,20 +1,20 @@
+class Solution(object):
+    def busyStudent(self, startTime, endTime, queryTime):
+        """
+        :type startTime: List[int]
+        :type endTime: List[int]
+        :type queryTime: int
+        :rtype: int
+        """
 
-startTime = [4]
-endTime = [4]
-queryTime = 4
+        result = 0
 
-result = 0
-print(list(range(4,4)))
-
-for i in range(len(startTime)):
-    
-    
-
+        for i in range(len(startTime)):
         
-    if queryTime in range(startTime[i], endTime[i]):
-        result += 1
-    else:
-        if startTime[0] == 4:
-            result += 1
+                if queryTime in range(startTime[i], endTime[i]+1):
+                    result += 1
+                else:
+                    if startTime[i] == queryTime:
+                        result += 1
 
-else: print(result)
+        else: return result
