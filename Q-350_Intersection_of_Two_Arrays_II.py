@@ -18,6 +18,6 @@ class Solution(object):
         for num in nums2: 
             if num in counter and counter[num] > 0:
                 result.append(num)
-                counter[num] -= 1
+                counter[num] -= 1 #most important part
 
         return result
