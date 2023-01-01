@@ -7,24 +7,25 @@ class Solution(object):
 
         lenght, temp = 0, 0
         i = 0
+        res = ""
 
         if len(s) == 1:
-            return 1
+            return 1 
 
+            
         while i <= len(s):
-            res = ""
-            for l in s[i:]:   
-                
+            for l in s[i+len(res):]:   
                 if l not in res:
                     res += l
+                    lenght = len(res)
                     continue
-
+                
+                res = res.replace(res[0], "")
                 break
-            
-            lenght = len(res)
+                    
             if lenght > temp:
                 temp = lenght
 
             i += 1
-        
+                   
         return temp
